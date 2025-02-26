@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&display=swap");
+
+/* Reset Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-font: "Be Vietnam Pro", serif;
+  --primary-font-bold: 700;
+  --primary-font-semibold: 600;
+  --primary-font-regular: 400;
+  --blue: #263fa9;
+  --white: #ffffff;
+  --black: #121826;
+  --brown: #7c4f1e;
+  --off-white: #f8fafc;
+  --light-gray: #e5e7eb;
+  --dark-gray: #4d5562;
+  --gray: #4d556233;
+}
+
+body {
+  height: 100vh;
+  font-family: var(--primary-font);
+}
+
+/* Reset Styles */
+
+/* Title Section */
+
+.title-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(assets/bg-pattern.png);
+  background-color: var(--off-white);
+  border-bottom: 1px solid var(--light-gray);
+  height: 180px;
+  margin-bottom: 100px;
+}
+
+h1 {
+  font-weight: var(--primary-font-bold);
+  font-size: 2rem;
+  color: var(--black);
+  margin-bottom: 20px;
+}
+
+.title-section p {
+  width: 450px;
+  text-align: center;
+  color: var(--dark-gray);
+  font-weight: var(--primary-font-regular);
+}
+
+/* Title Section */
+
+/* Pricing Table */
+
+.main-table {
+  width: 1100px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 0 none;
+}
+
+/* border for table data */
+.pricing-table tr {
+  border-bottom: 1px solid var(--light-gray);
+}
+
+/* alignment for all table data except the first column */
+.pricing-table tr td:not(:first-child) {
+  text-align: center;
+}
+
+/* color and font adjustments for data in first column */
+.pricing-table td:first-child {
+  background-color: var(--off-white);
+  font-weight: var(--primary-font-semibold);
+}
+
+/* border radius for data in first cell of first column */
+.pricing-table tr:nth-of-type(2) td:nth-child(1) {
+  border-top-left-radius: 10px;
+}
+
+/* color adjustment for the first cell in the last row */
+.pricing-table tr:last-of-type td:first-child {
+  background-color: transparent;
+}
+
+/* remove border for first and last row */
+.pricing-table tr:last-child {
+  border-bottom: none;
+}
+
+.pricing-table tr:first-child {
+  border-bottom: none;
+}
+
+/* padding for table cells */
+.pricing-table tr td {
+  padding: 20px 24px;
+  font-size: 14px;
+}
+
+/* padding for table header cells */
+.pricing-table th.price {
+  padding-bottom: 50px;
+  padding-top: 20px;
+}
+
+/* style for heading and paragraphs in header cells */
+.pricing-table th.price h2 {
+  font-size: 4rem;
+  font-weight: var(--primary-font-semibold);
+}
+
+.pricing-table th.price p:first-child {
+  font-size: 14px;
+  font-weight: var(--primary-font-semibold);
+  color: var(--blue);
+  margin-bottom: 20px;
+}
+
+.pricing-table th.price p:last-child {
+  color: var(--dark-gray);
+  font-size: 14px;
+  font-weight: var(--primary-font-regular);
+}
+
+/* style for 4th column aka highlighted column*/
+.pricing-table td:nth-child(4),
+th:nth-child(4) {
+  background-color: var(--black);
+  color: var(--white);
+  border-bottom: 1px solid var(--black);
+}
+
+.pricing-table th:nth-child(4) {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.pricing-table th:nth-child(4) p:first-child {
+  color: var(--white);
+  background-color: var(--blue);
+  padding: 5px 10px;
+  display: inline-block;
+  border-radius: 20px;
+}
+
+.pricing-table th:nth-child(4) p:last-child {
+  color: var(--white);
+}
+
+/* style for all button links */
+
+.pricing-table tr a {
+  text-decoration: none;
+  font-weight: var(--primary-font-semibold);
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+/* style for button in 4th column */
+.pricing-table tr:last-of-type td:nth-child(4) {
+  background-color: var(--brown);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom: 1px solid var(--white);
+}
+
+.pricing-table tr:nth-child(10) td:nth-child(4) a {
+  color: var(--white);
+}
+
+@media only screen and (max-width: 1024px) {
+  .main-table {
+    width: 800px;
+  }
+
+  .pricing-table td:nth-child(2),
+  .pricing-table th:nth-child(2) {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .pricing-table td:nth-child(2),
+  .pricing-table th:nth-child(2) {
+    display: none;
+  }
+
+  .pricing-table td:nth-child(3),
+  .pricing-table th:nth-child(3) {
+    display: none;
+  }
+  
+  .main-table {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .pricing-table th.price {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .pricing-table th.price:last-child {
+    padding-right: 0;
+    padding-left: 20px;
+  }
+
+  .pricing-table tr td {
+    padding: 12px 12px;
+  }
+
+  .pricing-table tr td:first-child {
+    padding-left: 12px;
+  }
+}
+/* author */
+.author-info {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 16px;
+  color: rgb(55, 65, 81);
+}
+
+.author-info a {
+  text-decoration: none;
+  color: var(--brown);
+}
