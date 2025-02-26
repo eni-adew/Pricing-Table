@@ -32,7 +32,7 @@
 
 ![screenshot](screenshots/desktop%20view.png)
 ![screenshot](screenshots/tablet%20view.png)
-![screenshot](screenshots/mobile%20view.png.png)
+![screenshot](screenshots/mobile%20view.png)
 
 
 ### Built with
